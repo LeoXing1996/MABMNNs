@@ -1,5 +1,6 @@
 clear;
 clc;
+%% 初始化
 global s;
 global r;
 global T;
@@ -36,3 +37,7 @@ c__ = 2.2;
 d_ = -0.95;
 %d__[i][j] -> d''[i][j]
 d__ = -1.3;
+%% 开始计算
+t_span = [0,500];
+sol = ddesd(@ddex1dez,@delay,@h,t_span);
+
